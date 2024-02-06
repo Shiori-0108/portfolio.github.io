@@ -1,0 +1,387 @@
+.wrapper {
+    overflow: hidden;
+}
+
+/* VIEW WORKSページ */
+.works_top {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.works_top .heading {
+    width: 150px;
+}
+
+@media screen and (max-width: 767px) {
+    .works_top .heading {
+        margin: 0 auto;
+        padding-top: 200px;
+    }
+}
+
+.works_message {
+    text-align: center;
+    font-size: 16px;
+    font-family: "yu-gothic", sans-serif;
+    line-height: 1.9;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+.gallery {
+    max-width: 1000px;
+    margin: 0 auto 200px;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9.5% 8.5%;
+    padding-bottom: 40px;
+}
+
+.gallery_menu {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    flex-wrap: wrap;
+}
+
+.gallery h3 {
+    font-size: 18px;
+    font-family: "futura-pt", "Noto Sans JP", sans-serif;
+    font-weight: normal;
+    line-height: 1.7;
+}
+
+.gallery p {
+    font-size: 14px;
+    font-family: "futura-pt", "Noto Sans JP", sans-serif;
+    font-weight: normal;
+    line-height: 0.7;
+    color: #999999;
+}
+
+.gallery a:hover {
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    /* VIEW WORKSページ */
+    .works_top {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .works_message {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .works_message p {
+        text-align: center;
+        font-size: 16px;
+        font-family: "yu-gothic", sans-serif;
+        line-height: 1.9;
+        margin: 50px;
+    }
+
+    .gallery {
+        padding-left: 37px;
+        padding-right: 37px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery h3 {
+        font-size: 18px;
+        font-family: "futura-pt", "Noto Sans JP", sans-serif;
+        font-weight: normal;
+    }
+
+    .gallery p {
+        font-size: 14px;
+        font-family: "futura-pt", sans-serif;
+    }
+
+    .gallery li {
+        margin-bottom: 40px;
+    }
+}
+
+
+/* hover */
+.readmore {
+    position: relative;
+}
+
+.readmore::before {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.readmore:hover::before {
+    content: "read more...";
+    position: absolute;
+    font-size: 18px;
+    font-family: "yu-gothic", sans-serif;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+/* WORKS各セクション */
+.detail {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.detail_mv {
+    margin: 0 auto;
+    font-family: "yu-gothic", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.detail_mv img {
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.detail_title {
+    margin: 20px;
+}
+
+.detail_title h2 {
+    justify-content: flex-start;
+    font-family: "futura-pt", "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 1.5rem;
+    color: #333e33;
+}
+
+.detail_title p {
+    font-family: "futura-pt", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: start;
+    line-height: 1.5rem;
+    color: #999999;
+    padding-top: 8px;
+}
+
+.detail_info {
+    display: flex;
+    justify-content: start;
+    margin: 20px;
+    font-family: "yu-gothic", sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.5rem;
+    letter-spacing: 0.080em;
+}
+
+.detail_content {
+    margin: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #afb6b3
+}
+
+.detail_content h3 {
+    padding-bottom: 10px;
+    font-family: "yu-gothic", sans-serif;
+    font-size: 16px;
+    line-height: 1.56em;
+    letter-spacing: 0.080em;
+}
+
+.detail_content p {
+    margin-bottom: 50px;
+    font-family: "yu-gothic", sans-serif;
+    font-size: 16px;
+    line-height: 1.56em;
+    letter-spacing: 0.080em;
+    text-align: justify;
+}
+
+.detail_img {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 100px 20px 250px;
+}
+
+.detail_img img {
+    border: 1px solid #999999;
+}
+
+.detail_img_item+.detail_img_item {
+    margin-left: 30px;
+}
+
+.detail_img_item2 {
+    margin: 0 auto;
+}
+
+/* 制作実績一覧に戻るボタン */
+.detail_btntextchange {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    outline: none;
+    transition: all .2s;
+    width: 260px;
+    height: 48px;
+    margin: 0 auto;
+    color: white;
+    font-family: "yu-gothic", sans-serif;
+    letter-spacing: 0.06em;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: #384842;
+    text-align: center;
+    line-height: 3;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+/*hoverした際の変化*/
+.detail_btntextchange:hover {
+    background: #384842;
+    color: #fff;
+}
+
+.detail_btntextchange span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .5s;
+    display: block;
+    white-space: nowrap;
+}
+
+.detail_btntextchange span:nth-child(2) {
+    opacity: 0;
+}
+
+.detail_btntextchange:hover span:nth-child(1) {
+    opacity: 0;
+}
+
+.detail_btntextchange:hover span:nth-child(2) {
+    opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+
+    /* WORKS各セクション */
+    .detail {
+        margin: 0 auto;
+        width: 80%;
+        padding-top: 0px;
+    }
+
+    .detail_mv {
+        font-family: "yu-gothic", sans-serif;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .detail_mv img {
+        object-fit: cover;
+        box-sizing: border-box;
+    }
+
+    .detail_title {
+        margin: 20px;
+    }
+
+    .detail_title h2 {
+        justify-content: flex-start;
+        font-family: "futura-pt", "Noto Sans JP", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 20px;
+        color: #333e33;
+        margin-top: 50px;
+    }
+
+    .detail_title p {
+        font-family: "futura-pt", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        text-align: start;
+        line-height: 1.5rem;
+        color: #999999;
+    }
+
+    .detail_info {
+        display: flex;
+        justify-content: start;
+        margin: 16px;
+    }
+
+    .detail_info p {
+        font-family: "yu-gothic", sans-serif;
+        font-size: 14px;
+        text-align: justify;
+        line-height: 1.5;
+    }
+
+    .detail_content {
+        margin: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #afb6b3
+    }
+
+    .detail_content h3 {
+        padding-bottom: 10px;
+        font-family: "yu-gothic", sans-serif;
+        font-size: 16px;
+        line-height: 1.56;
+        letter-spacing: 0.080em;
+    }
+
+    .detail_content p {
+        margin-bottom: 50px;
+        font-family: "yu-gothic", sans-serif;
+        font-size: 14px;
+        line-height: 2;
+        letter-spacing: 0.080em;
+        text-align: justify;
+    }
+
+    .detail_img {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px 20px 160px;
+    }
+
+    .detail_img img {
+        border: 1px solid #999999;
+    }
+
+    .detail_img_item+.detail_img_item {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}

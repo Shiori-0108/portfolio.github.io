@@ -1,0 +1,784 @@
+.wrapper {
+    overflow: hidden;
+}
+
+h1 {
+    font-family: "futura-pt", sans-serif;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    border: none;
+}
+
+/* メインビジュアル */
+.top_title {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    letter-spacing: 0.08em;
+    font-size: 40px;
+    font-family: "homemade-apple-pro", sans-serif;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 767px) {
+    .top_title {
+        position: absolute;
+        text-align: center;
+        /* あとは位置を調整 */
+        top: 50%;
+        line-height: 1.35;
+        letter-spacing: 0.040em;
+        font-size: 28px;
+        font-family: "homemade-apple-pro", sans-serif;
+        width: 100%;
+    }
+}
+
+
+/* ABOUT*/
+.about {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    max-width: 1000px;
+}
+
+.about_img {
+    width: 48%;
+    height: auto;
+}
+
+.about_text {
+    width: 45%;
+    margin-top: 50px;
+    margin: 20px 30px 20px 100px;
+    text-align: start;
+}
+
+.about p {
+    font-size: 18px;
+    font-family: "yu-gothic-pr6n", sans-serif;
+    font-weight: normal;
+    line-height: 1.8;
+    letter-spacing: 0.040em;
+}
+
+.about_space {
+    padding-top: 30px;
+}
+
+.about_btn {
+    display: block;
+    width: 260px;
+    height: 48px;
+    margin: 0 auto;
+    color: white;
+    font-family: "yu-gothic", sans-serif;
+    letter-spacing: 0.06em;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: #384842;
+    text-align: center;
+    line-height: 3;
+    padding: 10px 0;
+    margin-top: 55px;
+}
+
+.about .heading {
+    margin-top: -80px;
+}
+
+
+/* ABOUTもっと見るボタン */
+/*表示するテキストが切り替わる*/
+.about_btntextchange {
+    /*テキストの基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    transition: all .2s;
+    width: 260px;
+    height: 48px;
+    margin: 0 auto;
+    color: white;
+    font-family: "yu-gothic", sans-serif;
+    letter-spacing: 0.06em;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: #384842;
+    text-align: center;
+    line-height: 3;
+    padding: 10px 0;
+    margin-top: 55px;
+    margin-left: 60px;
+}
+
+@media screen and (max-width: 767px) {
+    .about_btntextchange {
+        margin-left: 0;
+    }
+}
+
+
+/*hoverした際の変化*/
+.about_btntextchange:hover {
+    background: #384842;
+    color: #fff;
+}
+
+.about_btntextchange span {
+    /*絶対配置でテキストの位置を決める*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*アニメーションの指定*/
+    transition: all .5s;
+    /*ブロック要素にしてテキスト折り返しなし*/
+    display: block;
+    white-space: nowrap;
+}
+
+/*差し替わるテキストの設定*/
+.about_btntextchange span:nth-child(2) {
+    opacity: 0;
+    /*透過0に*/
+}
+
+/*hoverするとテキストが入れ替わる設定*/
+.about_btntextchange:hover span:nth-child(1) {
+    opacity: 0;
+    /*透過0に*/
+}
+
+.about_btntextchange:hover span:nth-child(2) {
+    opacity: 1;
+    /*不透明に*/
+}
+
+
+@media screen and (max-width: 767px) {
+    .about {
+        padding-right: 33px;
+        padding-left: 33px;
+        padding-top: 10px;
+    }
+
+    .about_content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about_img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .about_text {
+        text-align: center;
+        width: 100%;
+        margin: 20px 10px;
+    }
+
+    .about p {
+        font-size: 16px;
+        font-family: "yu-gothic-pr6n", sans-serif;
+        font-weight: normal;
+        line-height: 1.3;
+        letter-spacing: 0.040em;
+    }
+
+    .about_space {
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .about_btn {
+        margin-top: 28px;
+        display: block;
+        width: 200px;
+        height: 35px;
+        margin: 0 auto;
+        color: white;
+        font-family: "yu-gothic", sans-serif;
+        letter-spacing: 0.06em;
+        border-radius: 50px;
+        font-size: 16px;
+        background-color: #384842;
+        text-align: center;
+        line-height: 1.75;
+    }
+}
+
+
+/* SERVICE */
+.service {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service_menu {
+    position: relative;
+    width: 45%;
+}
+
+.service_text {
+    border-bottom: 1px solid #afb6b3;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.service p {
+    font-family: "yu-gothic", sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+@media screen and (max-width: 767px) {
+    .service {
+        padding-right: 33px;
+        padding-left: 33px;
+    }
+
+    .service_block {
+        display: block;
+    }
+
+    .service_menu {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .service_menu img {
+        width: 100%;
+    }
+
+    .service_text {
+        border-bottom: 1px solid #afb6b3;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .service p {
+        font-family: "yu-gothic", sans-serif;
+        font-size: 16px;
+        line-height: 1.9;
+        text-align: justify;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ワークス */
+/* .works_ {
+    display: flex;
+    justify-content: space-between;
+} */
+.works {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.top_works {
+    justify-content: center;
+}
+
+.works_btn {
+    display: block;
+    width: 260px;
+    height: 48px;
+    margin: 0 auto;
+    color: white;
+    font-family: "yu-gothic", sans-serif;
+    letter-spacing: 0.06em;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: #384842;
+    text-align: center;
+    line-height: 3;
+    padding: 10px 0;
+    margin-top: 100px;
+}
+
+.slick-slide {
+    margin: 0 30px;
+}
+
+
+
+/* 仮 */
+/* ギャラリー スライダー調整 */
+.dots-class button {
+    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.dots-class {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.dots-class li {
+    width: 14px;
+    height: 14px;
+    background-color: #afb6b3;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: background-color .5s ease;
+}
+
+.dots-class li.slick-active {
+    background-color: #384842;
+}
+
+.dots-class li:hover {
+    background-color: #384842;
+}
+
+.dots-class li:last-child {
+    margin-right: 0;
+}
+
+/* ここからが不明点
+デフォルトのものを無くせない、ドットを写真の下に下ろせない  */
+
+.slick-prev .slick-arrow {
+    display: none;
+
+}
+
+.slick-next .slick-arrow {
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    .works {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .top_works {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* .works img {
+        max-width: 100%
+    } */
+
+    .page_top {
+        position: fixed;
+        right: 60px;
+        bottom: 40px;
+    }
+
+    /* 
+    消す
+    .works_btn {
+        display: block;
+        width: 260px;
+        height: 48px;
+        margin: 0 auto;
+        color: white;
+        font-family: "yu-gothic", sans-serif;
+        letter-spacing: 0.06em;
+        border-radius: 50px;
+        font-size: 16px;
+        background-color: #384842;
+        text-align: center;
+        line-height: 3;
+        padding: 10px 0;
+        margin-top: 50px;
+    } */
+}
+
+/* WORKSもっと見るボタン */
+
+/*表示するテキストが切り替わる*/
+.works_btntextchange {
+    /*テキストの基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    display: block;
+    text-decoration: none;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all .2s;
+    width: 260px;
+    height: 48px;
+    margin: 0 auto;
+    color: white;
+    font-family: "yu-gothic", sans-serif;
+    letter-spacing: 0.06em;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: #384842;
+    text-align: center;
+    line-height: 3;
+    padding: 10px 0;
+    margin-top: 50px;
+}
+
+
+/*hoverした際の変化*/
+.works_btntextchange:hover {
+    background: #384842;
+    color: #fff;
+}
+
+.works_btntextchange span {
+    /*絶対配置でテキストの位置を決める*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*アニメーションの指定*/
+    transition: all .5s;
+    /*ブロック要素にしてテキスト折り返しなし*/
+    display: block;
+    white-space: nowrap;
+}
+
+/*差し替わるテキストの設定*/
+.works_btntextchange span:nth-child(2) {
+    opacity: 0;
+    /*透過0に*/
+}
+
+/*hoverするとテキストが入れ替わる設定*/
+.works_btntextchange:hover span:nth-child(1) {
+    opacity: 0;
+    /*透過0に*/
+}
+
+.works_btntextchange:hover span:nth-child(2) {
+    opacity: 1;
+    /*不透明に*/
+}
+
+
+
+
+/* コンタクト */
+.contact {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact_message {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 45px;
+    font-family: "yu-gothic", sans-serif;
+    font-size: 14px;
+    line-height: 1.57;
+    letter-spacing: 0.060em;
+}
+
+.contact_wrap {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact_wrap p {
+    font-family: "yu-gothic", sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+.form_item {
+    padding-bottom: 40px;
+    font-family: "yu-gothic", sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.form_space {
+    padding-top: 8px;
+}
+
+.form_item_input {
+    padding: 10px 20px;
+    max-width: 500px;
+    border: 1px solid #afb6b3;
+    width: 100%;
+    font-size: 18px;
+    box-sizing: border-box
+}
+
+.form_item_textarea {
+    padding: 10px;
+    width: 100%;
+    height: 230px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 1px solid #afb6b3;
+}
+
+.form_btn {
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 150px;
+    display: block;
+    letter-spacing: 0.1rem;
+    background: #fff;
+    font-size: 12px;
+    border: 1px solid #afb6b3;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .contact_text {
+        margin: 0 auto;
+        font-family: "yu-gothic", sans-serif;
+        font-size: 15px;
+        line-height: 1.57;
+        /* 22/14で計算 */
+        letter-spacing: 0.060em;
+    }
+
+    .contact_message {
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .contact_wrap {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .contact_wrap p {
+        font-family: "yu-gothic", sans-serif;
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .form {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form_item {
+        padding-bottom: 40px;
+        font-family: "yu-gothic", sans-serif;
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+
+    .form_item_input {
+        box-sizing: border-box;
+        padding: 10px 20px;
+        border: 1px solid #afb6b3;
+        width: 100%;
+        font-size: 18px;
+    }
+
+
+    .form_item_textarea {
+        padding: 10px;
+        width: 100%;
+        height: 230px;
+        font-size: 14px;
+        box-sizing: border-box;
+        border: 1px solid #afb6b3;
+    }
+
+    .form_btn {
+        margin: 0 auto;
+        padding: 5px 0;
+        width: 120px;
+        display: block;
+        letter-spacing: 0.1rem;
+        background: #fff;
+        font-size: 12px;
+        border: 1px solid #afb6b3;
+    }
+}
+
+
+
+
+
+/* サンクスページ */
+.thanks {
+    padding-top: 100px;
+    max-width: 1000px;
+    margin-top: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.thanks_top p {
+    font-family: "yu-gothic", sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: bold;
+}
+
+.thanks img {
+    width: 128px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+}
+
+.thanks_message p {
+    font-family: "yu-gothic", sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .thanks {
+        margin-top: 110px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .thanks_top p {
+        font-family: "yu-gothic", sans-serif;
+        font-size: 16px;
+        line-height: 1.87;
+        font-weight: bold;
+    }
+
+    .thanks img {
+        width: 110px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .thanks_message p {
+        font-family: "yu-gothic", sans-serif;
+        font-size: 14px;
+        line-height: 1.87;
+        /* font-weight: medium; */
+
+    }
+}
+
+/* 手書きアニメーションここから */
+.hand-writing {
+    position: absolute;
+    top: 53%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 43%;
+    height: auto;
+}
+
+#text-base {
+    fill: #595959;
+}
+
+#text-path {
+    mask: url(#mask-stroke);
+}
+
+#mask-path {
+    fill: none;
+    stroke: #aedcc0;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 14.5;
+    stroke-dasharray: 3350px;
+    stroke-dashoffset: 3350px;
+    animation: writing 5s ease-out forwards;
+    stroke: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+    .hand-writing {
+        position: absolute;
+        top: 53%;
+        left: 48%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: auto;
+    }
+}
+
+@keyframes writing {
+    0% {
+        stroke-dashoffset: 3350px;
+    }
+
+    100% {
+        stroke-dashoffset: 0px;
+    }
+}
+
+/* 手書きアニメーションここまで */
